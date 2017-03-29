@@ -1,0 +1,11 @@
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+<br>
+<% if !@user.admin %>
+  <%= render :partial => 'users/show_user', :locals => {user: @user} %>
+<% else %>
+  <%= render :partial => 'users/show_admin', :locals => {user: @user} %>
+<% end %>
+
+<%= link_to "Log Out", session_path(@user), method: 'delete' %>

@@ -1,0 +1,20 @@
+<%= @attraction.name %>
+
+<!-- change this VVV to use take_ride, submit to rides_controller -->
+<%#= form_tag user_path(@user), method: :put do %>
+  <%#= hidden_field_tag :attraction_name, @attraction.name %>
+  <%#= hidden_field_tag :attraction_height, @attraction.min_height %>
+  <%#= hidden_field_tag :tickets_amount, @attraction.tickets %>
+  <%#= hidden_field_tag :happiness_rating, @attraction.happiness_rating %>
+  <%#= submit_tag 'Go on this ride' %>
+<%# end %>
+
+<%= form_tag rides_path(@ride) do %>
+  <%= hidden_field_tag :user_id, @user.id %>
+  <%= hidden_field_tag :attraction_id, @attraction.id %>
+  <%= submit_tag 'Go on this ride' %>
+<% end %>
+
+
+
+<%= admin_edit_attraction(@user, @attraction) %>

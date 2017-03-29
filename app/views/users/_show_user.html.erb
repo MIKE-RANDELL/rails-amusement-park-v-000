@@ -1,0 +1,8 @@
+<ol>
+  <li>Name: <%= user.name %></li>
+  <li>Mood: <%= happy_scale(user) %></li>
+  <li>Tickets: <%= user.tickets %></li>
+  <li>Height: <%= user.height %></li>
+</ol>
+<br>
+<%= link_to "See attractions", attractions_path %>

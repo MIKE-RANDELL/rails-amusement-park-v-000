@@ -1,0 +1,7 @@
+<% @attractions.each do |attraction| %>
+  <%= attraction.name %><br>
+  <%= ride_attraction(@user, attraction) %><br>
+  <%= admin_show_attraction(@user, attraction) %><br>
+<% end %>
+<br>
+<%= admin_new_attraction(@user) %>
